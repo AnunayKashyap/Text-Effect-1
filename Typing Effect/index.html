@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Effect</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            width:100vw;
+            height: 100vh;
+            background: linear-gradient(to right, #141414, #252525);
+
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .text{
+            font-size: 5em;
+            font-weight: bold;
+            text-align: center;
+            font-family:'Rubik', sans-serif;
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            background-image: linear-gradient(90deg, #14ffe9, #ffeb3b, #ff00e0,#14ffe9);
+
+            background-size: 200%;
+            background-position: 0%;
+
+            animation:textGradientAnimation 3s infinite ease;
+
+            color: transparent;
+        }
+
+        @keyframes textGradientAnimation{
+            from{
+                background-position: 100%;
+            }
+            to{
+                background-position: -100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <p class="text" contenteditable="true">Type anything here!</p>
+    </main>
+</body>
+</html>
